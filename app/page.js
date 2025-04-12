@@ -7,9 +7,9 @@ import { useRouter } from "next/navigation";
 const Home = () => {
   const router = useRouter();
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1 className="text-4xl font-bold text-white">Next Interview</h1>
-      <p className="text-lg text-gray-300">
+    <main className="flex h-screen flex-col items-center  p-2">
+      <h1 className="text-4xl font-bold">Next Interview</h1>
+      <p className="text-lg text-gray-600">
         Your AI-powered interview assistant
       </p>
       <div className="mt-8">
