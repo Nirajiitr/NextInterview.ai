@@ -24,7 +24,7 @@ const AuthPage = () => {
       const { error } = await supabase.auth.signInWithOAuth({
         provider: "google",
         options: {
-          redirectTo: `${window.location.origin}/dashboard`,
+          redirectTo: `${process.env.NEXT_PUBLIC_HOST_URL}/dashboard`,
         },
       });
       if (error) {
@@ -43,7 +43,7 @@ const AuthPage = () => {
       const { error, user } = await supabase.auth.signInWithOAuth({
         provider: "github",
         options: {
-          redirectTo: `${window.location.origin}/dashboard`,
+          redirectTo: `${process.env.NEXT_PUBLIC_HOST_URL}/dashboard`,
         },
       });
       console.log(user);
