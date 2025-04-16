@@ -13,7 +13,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { ArrowRight } from "lucide-react";
 import React, { useEffect, useState } from "react";
 
-const FormContainer = ({onHandleInputChange}) => {
+const FormContainer = ({onHandleInputChange, GoToNextStep}) => {
     const [interviewType, setInterviewType] = useState([]);
     useEffect(()=>{
         if(interviewType){
@@ -27,6 +27,7 @@ const FormContainer = ({onHandleInputChange}) => {
             setInterviewType([...interviewType, item]);
         }
     };
+   
   return (
     <div className="p-5 bg-white rounded-lg shadow-md">
       <div className="mt-5">
@@ -53,9 +54,10 @@ const FormContainer = ({onHandleInputChange}) => {
             <SelectValue placeholder="Select duration" />
           </SelectTrigger>
           <SelectContent>
+            <SelectItem value="5 min">5 minutes</SelectItem>
             <SelectItem value="30 min">30 minutes</SelectItem>
             <SelectItem value="60 min">60 minutes</SelectItem>
-            <SelectItem value="90 min">90 minutes</SelectItem>
+            <SelectItem value="120 min">120 minutes</SelectItem>
           </SelectContent>
         </Select>
       </div>
@@ -76,7 +78,7 @@ const FormContainer = ({onHandleInputChange}) => {
         </div>
       </div>
       <div className="mt-10 flex justify-end">
-       <Button>Generate Question <ArrowRight /></Button>
+       <Button onClick={GoToNextStep} >Generate Question <ArrowRight /></Button>
       </div>
     </div>
   );

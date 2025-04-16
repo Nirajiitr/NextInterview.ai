@@ -11,7 +11,7 @@ const Provider = ({ children }) => {
         .from("Users")
         .select("*")
         .eq("email", user?.email);
-     
+      
       if (Users?.length === 0) {
         const { data, error } = await supabase.from("Users").insert([
           {

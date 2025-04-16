@@ -14,9 +14,11 @@ import {
 import { Plus } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 const AppSidebar = () => {
   const path = usePathname();
+  const router = useRouter();
   return (
     <Sidebar>
       <SidebarHeader>
@@ -27,7 +29,7 @@ const AppSidebar = () => {
             className=" w-full h-full object-cover "
           />
         </div>
-        <Button className="mt-2 ">
+        <Button className="mt-2 cursor-pointer " onClick={()=>router.push("/dashboard/create-interview")}>
           <Plus /> Create New Interview{" "}
         </Button>
       </SidebarHeader>

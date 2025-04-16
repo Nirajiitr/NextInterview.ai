@@ -1,14 +1,14 @@
 "use client";
 import { useUser } from "@/app/provider";
+import { supabase } from "@/app/services/supabaseClient";
 import { Button } from "@/components/ui/button";
 import { Loader2Icon, Video } from "lucide-react";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import InterviewCard from "./InterviewCard";
-import { supabase } from "@/app/services/supabaseClient";
 import toast from "react-hot-toast";
+import InterviewCard from "../dashboard/_components/InterviewCard";
 
-const LatestInterviewsList = () => {
+const AllInterview = () => {
   const [interviewList, setInterviewList] = useState([]);
   const router = useRouter();
   const { user } = useUser();
@@ -43,7 +43,7 @@ const LatestInterviewsList = () => {
 
   return (
     <div className="my-5">
-      <h2 className="font-bold text-2xl ">Previously Created Interviews</h2>
+      <h2 className="font-bold text-2xl ">All Previously Created Interviews</h2>
       {loading ? (
         <div className="flex justify-center items-center h-96">
           <span className="animate-spin ">
@@ -76,4 +76,4 @@ const LatestInterviewsList = () => {
   );
 };
 
-export default LatestInterviewsList;
+export default AllInterview;
