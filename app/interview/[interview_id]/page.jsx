@@ -1,6 +1,5 @@
 "use client";
 import React, { useContext, useEffect, useState } from "react";
-import InterviewHeader from "../_components/interviewHeader";
 import Image from "next/image";
 import { Clock, Info, Loader2Icon, Video } from "lucide-react";
 import { Input } from "@/components/ui/input";
