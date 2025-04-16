@@ -4,13 +4,15 @@ import OpenAI from "openai";
 
 const MODEL_PRIORITY = [
 
-  "google/gemini-2.5-pro-exp-03-25:free",
+  "nvidia/llama-3.1-nemotron-ultra-253b-v1:free",
+  "meta-llama/llama-4-scout:free",
   "qwen/qwen2.5-vl-72b-instruct:free",
   "google/gemini-2.0-flash-exp:free",
   "deepseek/deepseek-r1:free",
   "deepseek/deepseek-chat-v3-0324:free",
   "openrouter/optimus-alpha",
   "meta-llama/llama-3.1-8b-instruct:free", 
+  "google/gemini-2.5-pro-exp-03-25:free",
 ];
 
 export const POST = async (req) => {

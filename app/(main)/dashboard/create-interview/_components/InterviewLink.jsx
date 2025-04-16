@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ArrowLeft, BadgeCheck, Clock, Copy, List, Plus } from "lucide-react";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import toast from "react-hot-toast";
 
 const InterviewLink = ({ interviewId, formData, questionList }) => {
@@ -11,6 +11,9 @@ const InterviewLink = ({ interviewId, formData, questionList }) => {
   const GetInterviewUrl = () => {
     return url;
   };
+  useEffect(() => {
+    GetInterviewUrl();
+  },[])
   const onCopyLink = () => {
     navigator.clipboard.writeText(url).then(() => {
       alert("Link copied to clipboard!");

@@ -4,9 +4,10 @@ import OpenAI from "openai";
 
 
 const MODEL_PRIORITY = [
+  "meta-llama/llama-4-maverick:free",
+  "qwen/qwen2.5-vl-72b-instruct:free",
   "deepseek/deepseek-r1:free",
     "openrouter/optimus-alpha",
-    "qwen/qwen2.5-vl-72b-instruct:free",
     "deepseek/deepseek-chat-v3-0324:free",
     "meta-llama/llama-3.1-8b-instruct:free", 
   ];
